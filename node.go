@@ -92,10 +92,10 @@ func formatDisplay(index int, nodeId uuid.UUID, deepness int) string {
 	marginLeft := deepness * 15
 	return fmt.Sprintf(`
 		<li style="margin-left: %dpx">
-    	<button hx-post="/add/%s" hx-target="#list" hx-swap="innerHtml">
+    	<button hx-post="/add/%s" hx-target="#list" hx-swap="innerHtml" hx-trigger="mouseenter">
     		+
     	</button>
-    	<button hx-post="/delete/%s" hx-target="#list" hx-swap="innerHtml">
+    	<button hx-post="/delete/%s" hx-target="#list" hx-swap="innerHtml" hx-trigger="mouseenter">
     		-
     	</button>
     	%d
